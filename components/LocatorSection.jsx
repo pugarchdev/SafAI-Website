@@ -236,7 +236,7 @@
         }
 
         const data = await response.json()
-        console.log('✅ Fetched locations:', data)
+        // console.log('✅ Fetched locations:', data)
         setLocations(data)
         setFiltered(data)
       } catch (error) {
@@ -343,12 +343,12 @@
                 setNearbyToilets(nearest)
               }
 
-              if (mapRef.current) {
-                mapRef.current.panTo(userPos)
-              }
+              // if (mapRef.current) {
+              //   mapRef.current.panTo(userPos)
+              // }
             },
             (error) => {
-              console.log('Watch position update failed:', error.code, error.message)
+              // console.log('Watch position update failed:', error.code, error.message)
             },
             {
               enableHighAccuracy: true,
@@ -952,7 +952,7 @@
                       }}
                       onFeedback={(toilet) => {
                         alert(`Feedback form for ${toilet.name}`)
-                        console.log('Open feedback form for:', toilet)
+                        // console.log('Open feedback form for:', toilet)
                       }}
                     />
                   ))}
